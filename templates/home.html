@@ -1,0 +1,366 @@
+this is the html code there --{% extends 'machine_data/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+    /* Reset and base styles */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f9fc;
+        color: #333;
+    }
+    .container {
+        margin-top: 30px;
+        padding: 0 15px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Interactive heading */
+    h1.dashboard-title {
+        text-align: center;
+        font-size: 2.8rem;
+        margin-bottom: 25px;
+        color: #007bff;
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    h1.dashboard-title:hover {
+        color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    /* Table Styling */
+    table.production-summary {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        font-size: 16px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        background: white;
+    }
+    table.production-summary thead {
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        color: white;
+        user-select: none;
+    }
+    table.production-summary thead th {
+        padding: 14px 20px;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        border-right: 1px solid rgba(255,255,255,0.3);
+        transition: background-color 0.3s ease;
+    }
+    table.production-summary thead th:last-child {
+        border-right: none;
+    }
+    table.production-summary thead th:hover {
+        background-color: #003d80;
+        cursor: pointer;
+    }
+
+    /* Body rows */
+    table.production-summary tbody tr {
+        border-bottom: 1px solid #e0e0e0;
+        transition: background-color 0.2s ease;
+    }
+    table.production-summary tbody tr:hover {
+        background-color: #f0f7ff;
+    }
+    table.production-summary tbody td {
+        padding: 12px 18px;
+        text-align: center;
+        vertical-align: middle;
+        border-right: 1px solid #e0e0e0;
+        font-weight: 600;
+        color: #555;
+        transition: color 0.3s ease;
+    }
+    table.production-summary tbody td:first-child {
+        text-align: left;
+        font-weight: 700;
+        color: #007bff;
+    }
+    table.production-summary tbody td:last-child {
+        border-right: none;
+    }
+
+    /* OEE Progress Bar */
+    .oee-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .oee-value {
+        font-weight: 700;
+        min-width: 45px;
+    }
+    .oee-bar {
+        width: 100px;
+        height: 12px;
+        background-color: #e0e0e0;
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+    }
+    .oee-fill {
+        height: 100%;
+        border-radius: 6px;
+        transition: width 0.5s ease;
+    }
+    .oee-high {
+        background-color: #28a745;
+    }
+    .oee-medium {
+        background-color: #ffc107;
+    }
+    .oee-low {
+        background-color: #dc3545;
+    }
+
+    /* Status color coding */
+    .status-ok {
+        background-color: #d4edda;
+        color: #155724;
+        font-weight: 600;
+        border-radius: 4px;
+        padding: 4px 8px;
+        display: inline-block;
+    }
+    .status-warning {
+        background-color: #fff3cd;
+        color: #856404;
+        font-weight: 600;
+        border-radius: 4px;
+        padding: 4px 8px;
+        display: inline-block;
+    }
+    .status-error {
+        background-color: #f8d7da;
+        color: #721c24;
+        font-weight: 600;
+        border-radius: 4px;
+        padding: 4px 8px;
+        display: inline-block;
+    }
+
+    /* Grid container for charts */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto 50px auto;
+    }
+    .plotly-chart {
+        border: 1px solid #ddd;
+        padding: 10px;
+        background-color: #fff;
+        width: 100%;
+        height: 38vh;
+        border-radius: 8px;
+        box-shadow: 0 1px 6px rgb(0 0 0 / 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+    .plotly-chart:hover {
+        box-shadow: 0 4px 20px rgb(0 0 0 / 0.15);
+    }
+    .chart-title {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    /* Additional container for last 2 charts (tatp1 and tatp2) */
+    .bottom-charts {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto 50px auto;
+    }
+    .bottom-charts .plotly-chart {
+        width: 45%;
+        height: 38vh;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 992px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .bottom-charts {
+            flex-direction: column;
+            align-items: center;
+        }
+        .bottom-charts .plotly-chart {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width: 600px) {
+        table.production-summary thead th,
+        table.production-summary tbody td {
+            padding: 10px 8px;
+            font-size: 14px;
+        }
+        h1.dashboard-title {
+            font-size: 2rem;
+        }
+        .oee-bar {
+            width: 70px;
+        }
+    }
+</style>
+
+<div class="container">
+    <!-- Interactive heading -->
+    <h1 class="dashboard-title" title="Click to refresh or interact!">IH DH Andon {{ shift_label }} Dashboard</h1>
+
+    <!-- Production Summary Table -->
+   <!-- Production Summary Table -->
+<table class="production-summary" aria-label="Production Summary Table">
+    <thead>
+        <tr>
+            <th>Machine</th>
+            <th>Part Count</th>
+            <th>Total Part</th>
+            <th>OEE (%)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% with total_PART_COUNT=0 total_TOTAL_PART=0 %}
+        {% for machine in machines %}
+        {% with total_part_count=total_part_count|add:machine.part_count total_total_part=total_total_part|add:machine.total_part %}
+        <tr>
+            <td>{{ machine.name }}</td>
+            <td>{{ machine.part_count }}</td>
+            <td>{{ machine.total_part }}</td>
+            <td>
+                <div class="oee-container">
+                    <span class="oee-value">{{ machine.oee }}%</span>
+                    <div class="oee-bar">
+                        <div class="oee-fill {% if machine.oee >= 85 %}oee-high{% elif machine.oee >= 70 %}oee-medium{% else %}oee-low{% endif %}" 
+                             style="width: {{ machine.oee }}%"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {% endwith %}
+        {% empty %}
+        <tr>
+            <td colspan="4" style="text-align:center;">No machine data available.</td>
+        </tr>
+        {% endfor %}
+        <!-- Totals row -->
+        <tr style="font-weight:700; background-color:#f1f1f1;">
+            <td>Total</td>
+            <td>{{ total_actual_parts }}</td>
+            <td>{{ total_possible_parts  }}</td>
+            <td></td>
+        </tr>
+        {% endwith %}
+    </tbody>
+</table>
+
+
+<!-- Grid container for first 6 charts -->
+<div class="grid-container">
+    <div>
+        <div class="chart-title">{{ machine_name_mikron }}</div>
+        <div id="mikron_chart" class="plotly-chart"></div>
+    </div>
+    <div>
+        <div class="chart-title">{{ machine_name_m1 }}</div>
+        <div id="chart_m1" class="plotly-chart"></div>
+    </div>
+    <div>
+        <div class="chart-title">{{ machine_name_m2 }}</div>
+        <div id="chart_m2" class="plotly-chart"></div>
+    </div>
+    <div>
+        <div class="chart-title">{{ machine_name_m3 }}</div>
+        <div id="chart_m3" class="plotly-chart"></div>
+    </div>
+    <div>
+        <div class="chart-title">{{ machine_name_tatp1 }}</div>
+        <div id="tatp1_chart" class="plotly-chart"></div>
+    </div>
+    <div>
+        <div class="chart-title">{{ machine_name_tatp2 }}</div>
+        <div id="tatp2_chart" class="plotly-chart"></div>
+    </div>
+</div>
+
+<!-- Plotly.js CDN -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<script type="text/javascript">
+    // Mikron Chart
+    {% if fig_data_mikron and fig_layout_mikron %}
+        var data_mikron = JSON.parse('{{ fig_data_mikron|escapejs }}');
+        var layout_mikron = JSON.parse('{{ fig_layout_mikron|escapejs }}');
+        Plotly.newPlot('mikron_chart', data_mikron, layout_mikron, {responsive: true});
+    {% else %}
+        document.getElementById('mikron_chart').innerHTML = '<p>No Mikron chart data available.</p>';
+    {% endif %}
+
+    // Machine 1 Chart
+    {% if fig_data_m1 and fig_layout_m1 %}
+        var data_m1 = JSON.parse('{{ fig_data_m1|escapejs }}');
+        var layout_m1 = JSON.parse('{{ fig_layout_m1|escapejs }}');
+        Plotly.newPlot('chart_m1', data_m1, layout_m1, {responsive: true});
+    {% else %}
+        document.getElementById('chart_m1').innerHTML = '<p>No data available for Machine 1.</p>';
+    {% endif %}
+
+    // Machine 2 Chart
+    {% if fig_data_m2 and fig_layout_m2 %}
+        var data_m2 = JSON.parse('{{ fig_data_m2|escapejs }}');
+        var layout_m2 = JSON.parse('{{ fig_layout_m2|escapejs }}');
+        Plotly.newPlot('chart_m2', data_m2, layout_m2, {responsive: true});
+    {% else %}
+        document.getElementById('chart_m2').innerHTML = '<p>No data available for Machine 2.</p>';
+    {% endif %}
+
+    // Machine 3 Chart
+    {% if fig_data_m3 and fig_layout_m3 %}
+        var data_m3 = JSON.parse('{{ fig_data_m3|escapejs }}');
+        var layout_m3 = JSON.parse('{{ fig_layout_m3|escapejs }}');
+        Plotly.newPlot('chart_m3', data_m3, layout_m3, {responsive: true});
+    {% else %}
+        document.getElementById('chart_m3').innerHTML = '<p>No data available for Machine 3.</p>';
+    {% endif %}
+
+    // TATP1 Chart
+    {% if tatp1_data and tatp1_layout %}
+        var data_tatp1 = JSON.parse('{{ tatp1_data|escapejs }}');
+        var layout_tatp1 = JSON.parse('{{ tatp1_layout|escapejs }}');
+        Plotly.newPlot('tatp1_chart', data_tatp1, layout_tatp1, {responsive: true});
+    {% else %}
+        document.getElementById('tatp1_chart').innerHTML = '<p>No data available for TATP1.</p>';
+    {% endif %}
+
+    // TATP2 Chart
+    {% if tatp2_data and tatp2_layout %}
+        var data_tatp2 = JSON.parse('{{ tatp2_data|escapejs }}');
+        var layout_tatp2 = JSON.parse('{{ tatp2_layout|escapejs }}');
+        Plotly.newPlot('tatp2_chart', data_tatp2, layout_tatp2, {responsive: true});
+    {% else %}
+        document.getElementById('tatp2_chart').innerHTML = '<p>No data available for TATP2.</p>';
+    {% endif %}
+</script>
+
+{% endblock %}

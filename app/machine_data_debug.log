@@ -1,0 +1,315 @@
+2025-11-12 18:38:03,421 - INFO - Starting startup_view function
+2025-11-12 18:38:03,472 - ERROR - Failed to create Oracle engine: No module named 'cx_Oracle'
+2025-11-12 18:38:03,509 - INFO - SQL Server engine created successfully
+2025-11-12 18:38:03,509 - INFO - Current time: 2025-11-12 18:38:03.509676, Day: Wednesday
+2025-11-12 18:38:03,509 - INFO - Shift details: Shift 2 (14:00 - 22:00 Local), Start: 2025-11-12 14:00:00, End: 2025-11-12 22:00:00
+2025-11-12 18:38:03,509 - INFO - Querying Mikron data from Oracle
+2025-11-12 18:38:04,347 - INFO - Mikron chart created
+2025-11-12 18:38:04,347 - INFO - Querying TATP data from Oracle
+2025-11-12 18:38:04,355 - INFO - Processing TATP data
+2025-11-12 18:38:04,397 - INFO - TATP1 chart created
+2025-11-12 18:38:04,462 - INFO - TATP2 chart created
+2025-11-12 18:38:04,462 - INFO - Fetching Machine 1 data
+2025-11-12 18:38:04,462 - INFO - Fetching SQL Server data for table: IHDH3254, method: minmax
+2025-11-12 18:38:04,470 - ERROR - Error fetching SQL Server data for table IHDH3254: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:38:04,519 - INFO - Machine 1 part count chart created
+2025-11-12 18:38:04,519 - INFO - Fetching Machine 2 data
+2025-11-12 18:38:04,527 - INFO - Fetching SQL Server data for table: IHDH9929, method: minmax
+2025-11-12 18:38:04,527 - ERROR - Error fetching SQL Server data for table IHDH9929: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:38:04,568 - INFO - Machine 2 chart created
+2025-11-12 18:38:04,568 - INFO - Fetching Machine 3 data
+2025-11-12 18:38:04,568 - INFO - Fetching SQL Server data for table: IHDH9930, method: minmax
+2025-11-12 18:38:04,576 - ERROR - Error fetching SQL Server data for table IHDH9930: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:38:04,715 - INFO - Machine 3 chart created
+2025-11-12 18:38:04,715 - INFO - Preparing machine summary data
+2025-11-12 18:38:04,715 - INFO - Total actual parts (all machines): 0
+2025-11-12 18:38:04,715 - INFO - Total possible parts (all machines): 8687
+2025-11-12 18:38:04,715 - INFO - Machine summary prepared
+2025-11-12 18:38:04,724 - INFO - Completed startup_view function successfully
+2025-11-12 18:38:05,025 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\machine_data\app\views.py", line 650, in startup_view
+    return render(request, 'machine_data/home.html', context)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: machine_data/home.html
+2025-11-12 18:39:44,313 - WARNING - Not Found: /favicon.ico
+2025-11-12 18:40:21,841 - INFO - C:\Users\navne\Desktop\idhd DashBord\machine_data\app\views.py changed, reloading.
+2025-11-12 18:40:38,922 - INFO - C:\Users\navne\Desktop\idhd DashBord\machine_data\machine_data\settings.py changed, reloading.
+2025-11-12 18:41:21,788 - INFO - Starting startup_view function
+2025-11-12 18:41:21,829 - ERROR - Failed to create Oracle engine: No module named 'cx_Oracle'
+2025-11-12 18:41:21,857 - INFO - SQL Server engine created successfully
+2025-11-12 18:41:21,857 - INFO - Current time: 2025-11-12 18:41:21.857120, Day: Wednesday
+2025-11-12 18:41:21,865 - INFO - Shift details: Shift 2 (14:00 - 22:00 Local), Start: 2025-11-12 14:00:00, End: 2025-11-12 22:00:00
+2025-11-12 18:41:21,865 - INFO - Querying Mikron data from Oracle
+2025-11-12 18:41:22,431 - INFO - Mikron chart created
+2025-11-12 18:41:22,431 - INFO - Querying TATP data from Oracle
+2025-11-12 18:41:22,439 - INFO - Processing TATP data
+2025-11-12 18:41:22,483 - INFO - TATP1 chart created
+2025-11-12 18:41:22,521 - INFO - TATP2 chart created
+2025-11-12 18:41:22,521 - INFO - Fetching Machine 1 data
+2025-11-12 18:41:22,521 - INFO - Fetching SQL Server data for table: IHDH3254, method: minmax
+2025-11-12 18:41:22,530 - ERROR - Error fetching SQL Server data for table IHDH3254: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:41:22,579 - INFO - Machine 1 part count chart created
+2025-11-12 18:41:22,579 - INFO - Fetching Machine 2 data
+2025-11-12 18:41:22,579 - INFO - Fetching SQL Server data for table: IHDH9929, method: minmax
+2025-11-12 18:41:22,579 - ERROR - Error fetching SQL Server data for table IHDH9929: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:41:22,732 - INFO - Machine 2 chart created
+2025-11-12 18:41:22,732 - INFO - Fetching Machine 3 data
+2025-11-12 18:41:22,732 - INFO - Fetching SQL Server data for table: IHDH9930, method: minmax
+2025-11-12 18:41:22,739 - ERROR - Error fetching SQL Server data for table IHDH9930: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:41:22,780 - INFO - Machine 3 chart created
+2025-11-12 18:41:22,780 - INFO - Preparing machine summary data
+2025-11-12 18:41:22,782 - INFO - Total actual parts (all machines): 0
+2025-11-12 18:41:22,782 - INFO - Total possible parts (all machines): 8790
+2025-11-12 18:41:22,782 - INFO - Machine summary prepared
+2025-11-12 18:41:22,788 - INFO - Completed startup_view function successfully
+2025-11-12 18:41:23,101 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: machine_data/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\machine_data\app\views.py", line 650, in startup_view
+    return render(request, 'app/home.html', context)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: machine_data/base.html
+2025-11-12 18:41:51,018 - INFO - Starting startup_view function
+2025-11-12 18:41:51,018 - ERROR - Failed to create Oracle engine: No module named 'cx_Oracle'
+2025-11-12 18:41:51,031 - INFO - SQL Server engine created successfully
+2025-11-12 18:41:51,032 - INFO - Current time: 2025-11-12 18:41:51.031080, Day: Wednesday
+2025-11-12 18:41:51,032 - INFO - Shift details: Shift 2 (14:00 - 22:00 Local), Start: 2025-11-12 14:00:00, End: 2025-11-12 22:00:00
+2025-11-12 18:41:51,032 - INFO - Querying Mikron data from Oracle
+2025-11-12 18:41:51,071 - INFO - Mikron chart created
+2025-11-12 18:41:51,071 - INFO - Querying TATP data from Oracle
+2025-11-12 18:41:51,080 - INFO - Processing TATP data
+2025-11-12 18:41:51,118 - INFO - TATP1 chart created
+2025-11-12 18:41:51,151 - INFO - TATP2 chart created
+2025-11-12 18:41:51,160 - INFO - Fetching Machine 1 data
+2025-11-12 18:41:51,160 - INFO - Fetching SQL Server data for table: IHDH3254, method: minmax
+2025-11-12 18:41:51,160 - ERROR - Error fetching SQL Server data for table IHDH3254: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:41:51,208 - INFO - Machine 1 part count chart created
+2025-11-12 18:41:51,208 - INFO - Fetching Machine 2 data
+2025-11-12 18:41:51,208 - INFO - Fetching SQL Server data for table: IHDH9929, method: minmax
+2025-11-12 18:41:51,208 - ERROR - Error fetching SQL Server data for table IHDH9929: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:41:51,249 - INFO - Machine 2 chart created
+2025-11-12 18:41:51,257 - INFO - Fetching Machine 3 data
+2025-11-12 18:41:51,257 - INFO - Fetching SQL Server data for table: IHDH9930, method: minmax
+2025-11-12 18:41:51,257 - ERROR - Error fetching SQL Server data for table IHDH9930: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:41:51,299 - INFO - Machine 3 chart created
+2025-11-12 18:41:51,299 - INFO - Preparing machine summary data
+2025-11-12 18:41:51,299 - INFO - Total actual parts (all machines): 0
+2025-11-12 18:41:51,299 - INFO - Total possible parts (all machines): 8806
+2025-11-12 18:41:51,299 - INFO - Machine summary prepared
+2025-11-12 18:41:51,308 - INFO - Completed startup_view function successfully
+2025-11-12 18:41:51,543 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\machine_data\app\views.py", line 650, in startup_view
+    return render(request, 'app/home.html', context)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navne\Desktop\idhd DashBord\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'adminLogin' not found. 'adminLogin' is not a valid view function or pattern name.
+2025-11-12 18:42:24,726 - INFO - Starting startup_view function
+2025-11-12 18:42:24,726 - ERROR - Failed to create Oracle engine: No module named 'cx_Oracle'
+2025-11-12 18:42:24,728 - INFO - SQL Server engine created successfully
+2025-11-12 18:42:24,729 - INFO - Current time: 2025-11-12 18:42:24.729550, Day: Wednesday
+2025-11-12 18:42:24,729 - INFO - Shift details: Shift 2 (14:00 - 22:00 Local), Start: 2025-11-12 14:00:00, End: 2025-11-12 22:00:00
+2025-11-12 18:42:24,729 - INFO - Querying Mikron data from Oracle
+2025-11-12 18:42:24,786 - INFO - Mikron chart created
+2025-11-12 18:42:24,786 - INFO - Querying TATP data from Oracle
+2025-11-12 18:42:24,786 - INFO - Processing TATP data
+2025-11-12 18:42:24,827 - INFO - TATP1 chart created
+2025-11-12 18:42:24,867 - INFO - TATP2 chart created
+2025-11-12 18:42:24,867 - INFO - Fetching Machine 1 data
+2025-11-12 18:42:24,867 - INFO - Fetching SQL Server data for table: IHDH3254, method: minmax
+2025-11-12 18:42:24,878 - ERROR - Error fetching SQL Server data for table IHDH3254: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:42:24,916 - INFO - Machine 1 part count chart created
+2025-11-12 18:42:24,916 - INFO - Fetching Machine 2 data
+2025-11-12 18:42:24,916 - INFO - Fetching SQL Server data for table: IHDH9929, method: minmax
+2025-11-12 18:42:24,924 - ERROR - Error fetching SQL Server data for table IHDH9929: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:42:24,963 - INFO - Machine 2 chart created
+2025-11-12 18:42:24,963 - INFO - Fetching Machine 3 data
+2025-11-12 18:42:24,965 - INFO - Fetching SQL Server data for table: IHDH9930, method: minmax
+2025-11-12 18:42:24,967 - ERROR - Error fetching SQL Server data for table IHDH9930: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:42:25,000 - INFO - Machine 3 chart created
+2025-11-12 18:42:25,000 - INFO - Preparing machine summary data
+2025-11-12 18:42:25,000 - INFO - Total actual parts (all machines): 0
+2025-11-12 18:42:25,000 - INFO - Total possible parts (all machines): 8822
+2025-11-12 18:42:25,000 - INFO - Machine summary prepared
+2025-11-12 18:42:25,012 - INFO - Completed startup_view function successfully
+2025-11-12 18:42:55,431 - INFO - Starting startup_view function
+2025-11-12 18:42:55,431 - ERROR - Failed to create Oracle engine: No module named 'cx_Oracle'
+2025-11-12 18:42:55,431 - INFO - SQL Server engine created successfully
+2025-11-12 18:42:55,431 - INFO - Current time: 2025-11-12 18:42:55.431826, Day: Wednesday
+2025-11-12 18:42:55,431 - INFO - Shift details: Shift 2 (14:00 - 22:00 Local), Start: 2025-11-12 14:00:00, End: 2025-11-12 22:00:00
+2025-11-12 18:42:55,431 - INFO - Querying Mikron data from Oracle
+2025-11-12 18:42:55,480 - INFO - Mikron chart created
+2025-11-12 18:42:55,481 - INFO - Querying TATP data from Oracle
+2025-11-12 18:42:55,481 - INFO - Processing TATP data
+2025-11-12 18:42:55,526 - INFO - TATP1 chart created
+2025-11-12 18:42:55,567 - INFO - TATP2 chart created
+2025-11-12 18:42:55,567 - INFO - Fetching Machine 1 data
+2025-11-12 18:42:55,575 - INFO - Fetching SQL Server data for table: IHDH3254, method: minmax
+2025-11-12 18:42:55,575 - ERROR - Error fetching SQL Server data for table IHDH3254: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:42:55,616 - INFO - Machine 1 part count chart created
+2025-11-12 18:42:55,616 - INFO - Fetching Machine 2 data
+2025-11-12 18:42:55,616 - INFO - Fetching SQL Server data for table: IHDH9929, method: minmax
+2025-11-12 18:42:55,621 - ERROR - Error fetching SQL Server data for table IHDH9929: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:42:55,665 - INFO - Machine 2 chart created
+2025-11-12 18:42:55,665 - INFO - Fetching Machine 3 data
+2025-11-12 18:42:55,665 - INFO - Fetching SQL Server data for table: IHDH9930, method: minmax
+2025-11-12 18:42:55,665 - ERROR - Error fetching SQL Server data for table IHDH9930: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:42:55,706 - INFO - Machine 3 chart created
+2025-11-12 18:42:55,706 - INFO - Preparing machine summary data
+2025-11-12 18:42:55,711 - INFO - Total actual parts (all machines): 0
+2025-11-12 18:42:55,711 - INFO - Total possible parts (all machines): 8838
+2025-11-12 18:42:55,711 - INFO - Machine summary prepared
+2025-11-12 18:42:55,714 - INFO - Completed startup_view function successfully
+2025-11-12 18:43:14,077 - INFO - Starting startup_view function
+2025-11-12 18:43:14,078 - ERROR - Failed to create Oracle engine: No module named 'cx_Oracle'
+2025-11-12 18:43:14,080 - INFO - SQL Server engine created successfully
+2025-11-12 18:43:14,080 - INFO - Current time: 2025-11-12 18:43:14.080160, Day: Wednesday
+2025-11-12 18:43:14,080 - INFO - Shift details: Shift 2 (14:00 - 22:00 Local), Start: 2025-11-12 14:00:00, End: 2025-11-12 22:00:00
+2025-11-12 18:43:14,080 - INFO - Querying Mikron data from Oracle
+2025-11-12 18:43:14,121 - INFO - Mikron chart created
+2025-11-12 18:43:14,121 - INFO - Querying TATP data from Oracle
+2025-11-12 18:43:14,129 - INFO - Processing TATP data
+2025-11-12 18:43:14,161 - INFO - TATP1 chart created
+2025-11-12 18:43:14,201 - INFO - TATP2 chart created
+2025-11-12 18:43:14,201 - INFO - Fetching Machine 1 data
+2025-11-12 18:43:14,209 - INFO - Fetching SQL Server data for table: IHDH3254, method: minmax
+2025-11-12 18:43:14,213 - ERROR - Error fetching SQL Server data for table IHDH3254: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:43:14,256 - INFO - Machine 1 part count chart created
+2025-11-12 18:43:14,256 - INFO - Fetching Machine 2 data
+2025-11-12 18:43:14,256 - INFO - Fetching SQL Server data for table: IHDH9929, method: minmax
+2025-11-12 18:43:14,260 - ERROR - Error fetching SQL Server data for table IHDH9929: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:43:14,301 - INFO - Machine 2 chart created
+2025-11-12 18:43:14,301 - INFO - Fetching Machine 3 data
+2025-11-12 18:43:14,301 - INFO - Fetching SQL Server data for table: IHDH9930, method: minmax
+2025-11-12 18:43:14,301 - ERROR - Error fetching SQL Server data for table IHDH9930: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-12 18:43:14,346 - INFO - Machine 3 chart created
+2025-11-12 18:43:14,346 - INFO - Preparing machine summary data
+2025-11-12 18:43:14,346 - INFO - Total actual parts (all machines): 0
+2025-11-12 18:43:14,346 - INFO - Total possible parts (all machines): 8846
+2025-11-12 18:43:14,346 - INFO - Machine summary prepared
+2025-11-12 18:43:14,357 - INFO - Completed startup_view function successfully

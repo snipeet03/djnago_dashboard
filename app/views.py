@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import pandas as pd
 from datetime import datetime, time, timedelta
-import cx_Oracle
+import oracledb as cx_Oracle
 from sqlalchemy import create_engine, text
 import json
 from plotly.utils import PlotlyJSONEncoder
@@ -647,4 +647,4 @@ def startup_view(request):
     }
 
     logger.info("Completed startup_view function successfully")
-    return render(request, 'machine_data/home.html', context)   
+    return render(request, 'app/home.html', context)   

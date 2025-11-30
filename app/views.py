@@ -11,7 +11,6 @@ import warnings
 import numpy as np
 import logging
 import sys
-import traceback
 import os
 
 # Configure logging to capture all output

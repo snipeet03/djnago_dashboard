@@ -313,3 +313,68 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'adminLogin' not found. 'admi
 2025-11-12 18:43:14,346 - INFO - Total possible parts (all machines): 8846
 2025-11-12 18:43:14,346 - INFO - Machine summary prepared
 2025-11-12 18:43:14,357 - INFO - Completed startup_view function successfully
+2025-11-27 18:04:18,651 - INFO - Starting startup_view function
+2025-11-27 18:04:18,682 - ERROR - Failed to create Oracle engine: No module named 'cx_Oracle'
+2025-11-27 18:04:18,704 - INFO - SQL Server engine created successfully
+2025-11-27 18:04:18,704 - INFO - Current time: 2025-11-27 18:04:18.704418, Day: Thursday
+2025-11-27 18:04:18,704 - INFO - Shift details: Shift 2 (14:00 - 22:00 Local), Start: 2025-11-27 14:00:00, End: 2025-11-27 22:00:00
+2025-11-27 18:04:18,704 - INFO - Querying Mikron data from Oracle
+2025-11-27 18:04:19,176 - INFO - Mikron chart created
+2025-11-27 18:04:19,176 - INFO - Querying TATP data from Oracle
+2025-11-27 18:04:19,177 - INFO - Processing TATP data
+2025-11-27 18:04:19,201 - INFO - TATP1 chart created
+2025-11-27 18:04:19,222 - INFO - TATP2 chart created
+2025-11-27 18:04:19,222 - INFO - Fetching Machine 1 data
+2025-11-27 18:04:19,223 - INFO - Fetching SQL Server data for table: IHDH3254, method: minmax
+2025-11-27 18:04:19,252 - ERROR - Error fetching SQL Server data for table IHDH3254: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-27 18:04:19,285 - INFO - Machine 1 part count chart created
+2025-11-27 18:04:19,285 - INFO - Fetching Machine 2 data
+2025-11-27 18:04:19,286 - INFO - Fetching SQL Server data for table: IHDH9929, method: minmax
+2025-11-27 18:04:19,287 - ERROR - Error fetching SQL Server data for table IHDH9929: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-27 18:04:19,368 - INFO - Machine 2 chart created
+2025-11-27 18:04:19,368 - INFO - Fetching Machine 3 data
+2025-11-27 18:04:19,369 - INFO - Fetching SQL Server data for table: IHDH9930, method: minmax
+2025-11-27 18:04:19,370 - ERROR - Error fetching SQL Server data for table IHDH9930: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-27 18:04:19,392 - INFO - Machine 3 chart created
+2025-11-27 18:04:19,392 - INFO - Preparing machine summary data
+2025-11-27 18:04:19,393 - INFO - Total actual parts (all machines): 0
+2025-11-27 18:04:19,393 - INFO - Total possible parts (all machines): 7633
+2025-11-27 18:04:19,393 - INFO - Machine summary prepared
+2025-11-27 18:04:19,400 - INFO - Completed startup_view function successfully
+2025-11-27 18:04:20,147 - WARNING - Not Found: /favicon.ico
+2025-11-27 18:25:19,493 - WARNING - Not Found: /favicon.ico
+2025-11-28 12:07:24,387 - INFO - Starting startup_view function
+2025-11-28 12:07:24,436 - ERROR - Failed to create Oracle engine: No module named 'cx_Oracle'
+2025-11-28 12:07:24,477 - INFO - SQL Server engine created successfully
+2025-11-28 12:07:24,477 - INFO - Current time: 2025-11-28 12:07:24.477036, Day: Friday
+2025-11-28 12:07:24,477 - INFO - Shift details: Shift 1 (06:00 - 14:00 Local), Start: 2025-11-28 06:00:00, End: 2025-11-28 14:00:00
+2025-11-28 12:07:24,477 - INFO - Querying Mikron data from Oracle
+2025-11-28 12:07:25,329 - INFO - Mikron chart created
+2025-11-28 12:07:25,329 - INFO - Querying TATP data from Oracle
+2025-11-28 12:07:25,331 - INFO - Processing TATP data
+2025-11-28 12:07:25,381 - INFO - TATP1 chart created
+2025-11-28 12:07:25,442 - INFO - TATP2 chart created
+2025-11-28 12:07:25,443 - INFO - Fetching Machine 1 data
+2025-11-28 12:07:25,443 - INFO - Fetching SQL Server data for table: IHDH3254, method: minmax
+2025-11-28 12:07:25,460 - ERROR - Error fetching SQL Server data for table IHDH3254: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-28 12:07:25,513 - INFO - Machine 1 part count chart created
+2025-11-28 12:07:25,513 - INFO - Fetching Machine 2 data
+2025-11-28 12:07:25,513 - INFO - Fetching SQL Server data for table: IHDH9929, method: minmax
+2025-11-28 12:07:25,521 - ERROR - Error fetching SQL Server data for table IHDH9929: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-28 12:07:25,572 - INFO - Machine 2 chart created
+2025-11-28 12:07:25,572 - INFO - Fetching Machine 3 data
+2025-11-28 12:07:25,572 - INFO - Fetching SQL Server data for table: IHDH9930, method: minmax
+2025-11-28 12:07:25,572 - ERROR - Error fetching SQL Server data for table IHDH9930: (pyodbc.InterfaceError) ('IM002', '[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-11-28 12:07:25,694 - INFO - Machine 3 chart created
+2025-11-28 12:07:25,694 - INFO - Preparing machine summary data
+2025-11-28 12:07:25,694 - INFO - Total actual parts (all machines): 0
+2025-11-28 12:07:25,703 - INFO - Total possible parts (all machines): 11477
+2025-11-28 12:07:25,703 - INFO - Machine summary prepared
+2025-11-28 12:07:25,703 - INFO - Completed startup_view function successfully
+2025-11-28 12:07:26,414 - WARNING - Not Found: /favicon.ico
